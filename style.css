@@ -276,4 +276,12 @@
       padding-top:10px;
     }
 
+    .right #artist{
+      margin-top: 0px;
+    }
+
+    body{
+      height:unset;
+    }
+
   }

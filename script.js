@@ -11,6 +11,7 @@ let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
+let hideVolume = document.getElementsByClassName('volume');
 
 
 let timer;
@@ -19,11 +20,29 @@ let autoplay = 0;
 let index_no = 0;
 let Playing_song = false;
 
+
+
+
+//hidding volume control for mobile and tablet devices
+function hideControlVolume() {
+	var divElements = document.querySelectorAll(".volume");
+
+	// Check if the user is on a mobile or tablet device
+	if (
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		)
+	) {
+		// Hide all div elements with the class name 'volume'
+		divElements.forEach(function (element) {
+			element.style.display = "none";
+		});
+	}
+}
+
 //create a audio Element
 
 let track = document.createElement('audio');
-console.log(track);
-
 
 //All songs list
 let All_song = [
@@ -218,3 +237,8 @@ function range_slider() {
 		}
 	}
 }
+
+// Call the function to hide control volume when the page loads
+window.onload = function () {
+	hideControlVolume();
+};
