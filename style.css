@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #35232f
+    background-color: black;
 
     /*background: linear-gradient(to right, #5d6d7e, #566573);*/
   }
+
+
   .main button {
     padding: 10px 12px;
     margin: 0 10px;
@@ -47,14 +51,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    max-height: 500px;
   }
   
   /* song image */
   .left img {
     height: 300px;
     width: auto;
-    border-radius: 15px;
-    box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
   }
   
   /* both range slider part */
@@ -79,14 +82,13 @@
   
   /* volume part */
   .left .volume {
-    position: absolute;
-    bottom: 10%;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 70px;
     color: #fff;
   }
   .left .volume p {
@@ -98,13 +100,14 @@
     background: hsl(0, 94%, 49%);
   }
   .left .volume i:hover {
-    background: rgba(245, 245, 245, 0.1);
+    background: #011F41;
   }
   .volume #volume_show {
     padding: 8px 12px;
     margin: 0 5px 0 0;
     background: rgba(245, 245, 245, 0.1);
   }
+
   
   /* right part */
   .right .middle {
@@ -115,8 +118,8 @@
   }
   .right .middle button {
     border: none;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -124,25 +127,27 @@
     cursor: pointer;
     outline: none;
     transition: 0.5s;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
   }
   .right #title {
+    font-family: 'Oswald', sans-serif;
     position: absolute;
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
     text-transform: capitalize;
     color: #fff;
-    font-size: 35px;
+    font-size: 40px;
   }
   .right #artist {
+    font-family: 'Oswald', sans-serif;
     position: absolute;
     top: 110px;
     left: 50%;
     transform: translateX(-50%);
     text-transform: capitalize;
     color: #fff;
-    font-size: 18px;
+    font-size: 22px;
   }
   .right .duration {
     position: absolute;
@@ -164,13 +169,12 @@
   .right #auto {
     font-size: 18px;
     cursor: pointer;
-    margin-top: 45px;
+    margin-top: 20px;
     border: none;
     padding: 10px 14px;
     color: #fff;
     background: rgba(255, 255, 255, 0.2);
     outline: none;
-    border-radius: 10px;
   }
   .right #auto i {
     margin-left: 8px;
@@ -179,7 +183,7 @@
     background: hsl(0, 94%, 49%);
   }
   .right button:hover {
-    background: #ff8a65;
+    background: #011F41;
   }
   .right i:before {
     color: #fff;
@@ -246,8 +250,8 @@
     }
 
     .main{
-      padding: 200px 0px 70px 0px;
-      height:750px;
+      padding: 70px 0px 70px 0px;
+      /*height:750px;*/
       width:95%;
     }
 
